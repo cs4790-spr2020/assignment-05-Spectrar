@@ -31,7 +31,7 @@ namespace BlabberApp.ServicesTest {
         public void AddNewBlabTest() {
             //Arrange
             string email = "user@example.com";
-            string msg = "Prow scuttle parrel provost Sail ho shrouds spirits boom mizzenmast yardarm.";
+            string msg = "Test Message.";
             BlabService blabService = _blabServiceFactory.CreateBlabService();
             Blab blab = blabService.CreateBlab(msg, email);
             blabService.AddBlab(blab);

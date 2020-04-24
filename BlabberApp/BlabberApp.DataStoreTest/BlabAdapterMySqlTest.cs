@@ -81,5 +81,23 @@ namespace BlabberApp.DataStoreTest {
             _harness.RemoveAll();
             var actual = _harness.GetById(blab.Id);
         }
+
+        [TestMethod]
+        public void SQLCreate()
+        {
+            //mock User and Blab
+            string email = "them@cool.com";
+            User user = new User(email);
+            Blab blab = new Blab("Test", user);
+            //Add blab to database
+            _harness.Add(blab);
+            _harness.Update(blab);
+            //get blab from database
+            //ArrayList actual = (ArrayList)adapter.GetByUserId(email);
+            //Gets single blab from user
+            Blab actual = _harness.GetById(blab.Id);
+            _harness.GetByUserId("");
+            Assert.AreEqual(actual.Id, blab.Id);
+        }
     }
 }

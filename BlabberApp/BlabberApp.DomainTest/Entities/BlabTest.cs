@@ -12,8 +12,8 @@ namespace BlabberApp.DomainTest.Entities {
         [TestMethod]
         public void TestSetGetMessage() {
             // Arrange
-            string expected = "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...";
-            harness.Message = "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...";
+            string expected = "My test message";
+            harness.Message = "My test message";
             // Act
             string actual = harness.Message;
             // Assert
